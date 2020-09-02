@@ -119,9 +119,23 @@ main {
 		font-size: 30px;
 		color: $braun;
 		margin: 0 0 30px;
+		text-align: center;
 	}
-	&__title_md3 {
+	&__title_md3,
+	&__location_md3 {
 		display: none;
+	}
+	&__location,
+	&__location_md3 {
+		font-family: $fontfamilyAdd;
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 700;
+		margin: 0 0 35px;
+		// color: $green;
+		color: #bc0000;
+		text-align: center;
+		text-transform: uppercase;
 	}
 	// .main-screen__subtitle
 	&__subtitle {
@@ -136,6 +150,7 @@ main {
 			line-height: 22px;
 			margin: 0 0 20px;
 			padding: 0 0 0 30px;
+			text-align: justify;
 			background: url(../img/icons/tick.png) 0 0 / 20px no-repeat;
 		}
 	}
@@ -157,7 +172,8 @@ main {
 		&__text {
 			padding: 0 0 0 0;
 		}
-		&__title {
+		&__title,
+		&__location {
 			display: none;
 		}
 		&__title_md3 {
@@ -169,6 +185,11 @@ main {
 			font-weight: 600;
 			margin: 0 0 20px;
 			text-align: center;
+		}
+		&__location_md3 {
+			display: block;
+			font-size: 16px;
+			margin: 0 0 10px;
 		}
 		&__subtitle {
 			font-size: 18px;
