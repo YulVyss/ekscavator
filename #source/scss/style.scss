@@ -76,7 +76,7 @@ $bg_footer: #594740;
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-@import "forms.scss";
+// @import "forms.scss";
 @import "ui.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
@@ -88,10 +88,10 @@ $bg_footer: #594740;
 //@import "baguetteBox.scss";
 //@import "pagging.scss";
 //@import "icons.scss";
-@import "popup.scss";
+// @import "popup.scss";
 @import "header.scss";
 @import "footer.scss";
-@import "home.scss";
+// @import "home.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -112,6 +112,14 @@ main {
 	// .main-screen__text
 	&__text {
 		padding: 0 0 0 50px;
+		p {
+			font-size: 18px;
+			line-height: 22px;
+			margin: 0 0 20px;
+			font-family: $fontfamilyAdd;
+			font-weight: 700;
+			text-align: center;
+		}
 	}
 	// .main-screen__title
 	&__title {
@@ -208,21 +216,37 @@ main {
 	}
 	// .map__list
 	&__list {
-		flex: 1 0 50%;
-		padding: 40px 50px 40px 0;
 		li {
 			font-family: $fontfamilyAdd;
-			font-size: 20px;
-			line-height: 24px;
-			margin: 0 0 35px;
+			font-size: 18px;
+			line-height: 20px;
+			margin: 0 0 20px;
 			// color: $green;
-			color: #bc0000;
+			color: #000;
 			font-weight: 600;
-			text-align: center;
+			background: url(../img/icons/exc.ico) 0 0 no-repeat;
+			padding: 0 0 0 20px;
+		}
+	}
+	&__text {
+		flex: 1 0 50%;
+		padding: 40px 50px 0 0;
+	}
+	&__adv {
+		font-family: $fontfamilyAdd;
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0 0 35px;
+		// color: $green;
+		color: #bc0000;
+		font-weight: 600;
+		text-align: center;
+		&:last-of-type {
+			margin: 0;
 		}
 	}
 	&__image {
-		flex: 1 1 50%;
+		flex: 1 0 50%;
 	}
 	@media (max-width: $md2+px) {
 		padding: 30px 0 70px;
@@ -235,14 +259,22 @@ main {
 		iframe {
 			width: 100%;
 		}
-		&__list {
+		&__text {
 			padding: 15px 0 0;
 		}
+		&__list {
+		}
 		li {
-			font-size: 18px;
-			line-height: 22px;
+			font-size: 16px;
+			line-height: 20px;
 			margin: 0 0 20px;
 			// color: $green;
+		}
+		&__adv {
+			margin: 0 0 20px;
+			&:last-of-type {
+				margin: 0 0 20px;
+			}
 		}
 	}
 }
